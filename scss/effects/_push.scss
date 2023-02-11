@@ -1,0 +1,50 @@
+[class*=#{$imghv-selector}-push] { 
+  &:hover img {
+    transition-duration: .8s;
+  }
+  figcaption {
+    z-index: -1;
+  }
+}
+
+.#{$imghv-selector}-push {
+  &-up {
+    &:hover img {
+      transform: translateY(calc(-100% - 5px));
+    }
+  
+    &:not(:hover) figcaption {
+      transform: translateY(100%);
+    }
+  }
+
+  &-right {
+    &:hover img {
+      transform: translateX(calc(100% + 5px));
+    }
+  
+    &:not(:hover) figcaption {
+      transform: translateX(-100%);
+    }
+  }
+
+  &-left {
+    &:hover img {
+      transform: translateX(calc(-100% - 5px));
+    }
+  
+    &:not(:hover) figcaption {
+      transform: translateX(100%);
+    }
+  }
+
+  &-down {
+    &:hover img {
+      transform: translateY(calc(100% + 5px));
+    }
+  
+    &:not(:hover) figcaption {
+      transform: translateY(-100%);
+    }
+  }
+}

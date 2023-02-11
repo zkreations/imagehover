@@ -1,0 +1,14 @@
+// Variables
+$imghv-selector: "img" !default;
+$imghv-bg: rgb(0 0 0 / 90%);
+$imghv-padding: 1.5rem;
+$imghv-color: #fff;
+$imghv-fs: 1.125rem;
+
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29"),
+) !default;

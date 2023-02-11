@@ -1,0 +1,43 @@
+[class*=#{$imghv-selector}-] {
+  position: relative;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  img {
+    backface-visibility: hidden;
+  }
+
+  &::before,
+  &::after,
+  img,
+  figcaption,
+  figcaption::before,
+  figcaption::after {
+    transition-duration: .6s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(.54, 0, .1, 1);
+  }
+
+  &::before,
+  &::after,
+  figcaption,
+  figcaption::before,
+  figcaption::after {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  figcaption {
+    background-color: $imghv-bg;
+    padding: $imghv-padding;
+    color: $imghv-color;
+    font-size: $imghv-fs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+}

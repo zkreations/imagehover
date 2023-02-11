@@ -1,0 +1,97 @@
+[class*=#{$imghv-selector}-back] {
+  perspective: 70rem;
+
+  figcaption {
+    z-index: 1;
+  }
+
+  &:hover {
+    img {
+      opacity: 0;
+    }
+
+    figcaption {
+      transition-delay: 0.2s;
+    }
+  }
+
+  &:not(:hover) {
+    figcaption {
+      opacity: 0;
+    }
+  }
+}
+
+.#{$imghv-selector}-back {
+  &-up {
+    img {
+      transform-origin: top;
+    }
+
+    figcaption {
+      transform-origin: bottom;
+    }
+
+    &:hover img {
+      transform: scale(.6) rotateX(75deg) translateY(50%);
+    }
+
+    &:not(:hover) figcaption {
+      transform: scale(.6) rotateX(-75deg) translateY(-50%);
+    }
+  }
+
+  &-left {
+    img {
+      transform-origin: left;
+    }
+
+    figcaption {
+      transform-origin: right;
+    }
+
+    &:hover img {
+      transform: scale(.6) rotateY(-75deg) translateX(50%);
+    }
+
+    &:not(:hover) figcaption {
+      transform: scale(.6) rotateY(75deg) translateX(-50%);
+    }
+  }
+
+  &-right {
+    img {
+      transform-origin: right;
+    }
+
+    figcaption {
+      transform-origin: left;
+    }
+
+    &:hover img {
+      transform: scale(.6) rotateY(75deg) translateX(-50%);
+    }
+
+    &:not(:hover) figcaption {
+      transform: scale(.6) rotateY(-75deg) translateX(50%);
+    }
+  }
+
+  &-down {
+    img {
+      transform-origin: bottom;
+    }
+
+    figcaption {
+      transform-origin: top;
+    }
+
+    &:hover img {
+      transform: scale(.6) rotateX(-75deg) translateY(-50%);
+    }
+
+    &:not(:hover) figcaption {
+      transform: scale(.6) rotateX(75deg) translateY(50%);
+    }
+  }
+}
