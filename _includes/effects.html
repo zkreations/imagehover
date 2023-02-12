@@ -1,0 +1,13 @@
+<main class="main">
+  <div class="columns">
+    {% for effect in site.data.effects %}
+    <div class="column">
+      <figure class="{{ effect.name }}">
+        <img src="assets/example.jpg" width="500" height="400">
+        <figcaption>Text here</figcaption>
+      </figure>
+      <code class="copy-name">{{ effect.name }}</code>
+    </div>
+    {% endfor %}
+  </div>
+</main>

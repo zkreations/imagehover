@@ -1,4 +1,9 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
 # Folders
-/test
 /node_modules
 package-lock.json
