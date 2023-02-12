@@ -64,13 +64,13 @@
         opacity: 0;
       }
       figcaption {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
     }
 
     &:not(:hover) {
       img {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
       figcaption {
         transform: rotateX(90deg);
@@ -87,13 +87,13 @@
         opacity: 0;
       }
       figcaption {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
     }
 
     &:not(:hover) {
       img {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
       figcaption {
         transform: rotateY(90deg);
@@ -111,13 +111,13 @@
         opacity: 0;
       }
       figcaption {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
     }
 
     &:not(:hover) {
       img {
-        transition-delay: 0.2s;
+        transition-delay: ($imghv-duration * 0.4);
       }
       figcaption {
         transform: rotate3d(-1, 1, 0, 100deg);

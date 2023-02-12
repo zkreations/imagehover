@@ -11,7 +11,7 @@
 [class*=img-] figcaption,
 [class*=img-] figcaption::before,
 [class*=img-] figcaption::after {
-  transition-duration: 0.6s;
+  transition-duration: 2s;
   transition-property: opacity, transform;
   transition-timing-function: cubic-bezier(0.54, 0, 0.1, 1);
 }
@@ -54,7 +54,7 @@
 }
 
 [class*=img-push]:hover img {
-  transition-duration: 0.8s;
+  transition-duration: 2.5s;
 }
 [class*=img-push] figcaption {
   z-index: -1;
@@ -130,10 +130,10 @@
   opacity: 0;
 }
 .img-flip-x:hover figcaption {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-x:not(:hover) img {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-x:not(:hover) figcaption {
   transform: rotateX(90deg);
@@ -146,10 +146,10 @@
   opacity: 0;
 }
 .img-flip-y:hover figcaption {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-y:not(:hover) img {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-y:not(:hover) figcaption {
   transform: rotateY(90deg);
@@ -162,10 +162,10 @@
   opacity: 0;
 }
 .img-flip-xy:hover figcaption {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-xy:not(:hover) img {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 .img-flip-xy:not(:hover) figcaption {
   transform: rotate3d(-1, 1, 0, 100deg);
@@ -177,7 +177,7 @@
   transition-property: color;
 }
 [class*=img-blinds]:hover figcaption {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 [class*=img-blinds]::before, [class*=img-blinds]::after,
 [class*=img-blinds] figcaption::before,
@@ -193,13 +193,13 @@
   transition-property: opacity, transform, height, width;
 }
 [class*=img-blinds]::after {
-  transition-delay: 0.05s;
+  transition-delay: 0.2s;
 }
 [class*=img-blinds] figcaption::before {
-  transition-delay: 0.1s;
+  transition-delay: 0.4s;
 }
 [class*=img-blinds] figcaption::after {
-  transition-delay: 0.15s;
+  transition-delay: 0.6s;
 }
 [class*=img-blinds] figcaption::before,
 [class*=img-blinds] figcaption::after {
@@ -285,7 +285,7 @@
   opacity: 0;
 }
 [class*=img-back]:hover figcaption {
-  transition-delay: 0.2s;
+  transition-delay: 0.8s;
 }
 [class*=img-back]:not(:hover) figcaption {
   opacity: 0;

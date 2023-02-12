@@ -7,7 +7,7 @@
 
   &:hover {
     figcaption {
-      transition-delay: 0.2s;
+      transition-delay: ($imghv-duration * 0.4);
     }
   }
 
@@ -27,15 +27,15 @@
   }
 
   &::after {
-    transition-delay: 0.05s;
+    transition-delay: ($imghv-duration * 0.1);
   }
 
   figcaption::before {
-    transition-delay: 0.1s;
+    transition-delay:($imghv-duration * 0.2);
   }
 
   figcaption::after {
-    transition-delay: 0.15s;
+    transition-delay: ($imghv-duration * 0.3);
   }
 
   figcaption::before,

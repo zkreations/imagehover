@@ -1,6 +1,6 @@
 [class*=#{$imghv-selector}-push] { 
   &:hover img {
-    transition-duration: .8s;
+    transition-duration: ($imghv-duration * 1.25);
   }
   figcaption {
     z-index: -1;
