@@ -6,11 +6,3 @@ $imghv-color: #fff !default;
 $imghv-fs: 1.125rem !default;
 $imghv-duration: 0.5s !default;
 $imghv-timing: cubic-bezier(.54, 0, .1, 1) !default;
-
-$escaped-characters: (
-  ("<", "%3c"),
-  (">", "%3e"),
-  ("#", "%23"),
-  ("(", "%28"),
-  (")", "%29"),
-) !default;
