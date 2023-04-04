@@ -15,7 +15,7 @@
   figcaption::after {
     transition-duration: $imghv-duration;
     transition-property: opacity, transform;
-    transition-timing-function: cubic-bezier(.54, 0, .1, 1);
+    transition-timing-function: $imghv-timing;
   }
 
   &::before,
