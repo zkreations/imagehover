@@ -24,18 +24,23 @@
     transform: translate3d(var(--ib-tx, 0), var(--ib-ty, 0), var(--ib-tz, 0));
     opacity: var(--ib-to, 1);
     transition-property: opacity, transform, height, width;
+    transition-timing-function: var(--ib-timing, $imghv-timing);
+  }
+
+  &::before {
+    transition-delay: calc($imghv-duration * var(--ib-d1, 0));
   }
 
   &::after {
-    transition-delay: ($imghv-duration * 0.1);
+    transition-delay: calc($imghv-duration * var(--ib-d2, 0.1));
   }
 
   figcaption::before {
-    transition-delay:($imghv-duration * 0.2);
+    transition-delay: calc($imghv-duration * var(--ib-d3, 0.2));
   }
 
   figcaption::after {
-    transition-delay: ($imghv-duration * 0.3);
+    transition-delay: calc($imghv-duration * var(--ib-d4, 0.3));
   }
 
   figcaption::before,
@@ -84,22 +89,19 @@
 }
 
 .#{$imghv-selector}-blinds {
+
+  // Vertical
   &-y {
+    &-invert {
+      --ib-d1: 0.3;
+      --ib-d2: 0.2;
+      --ib-d3: 0.1;
+      --ib-d4: 0;
+    }
+
     &-up {
       &:not(:hover) {
         --ib-ty: -100%;
-      }
-    }
-
-    &-left {
-      &:not(:hover) {
-        --ib-tx: -100%;
-      }
-    }
-
-    &-right {
-      &:not(:hover) {
-        --ib-tx: 100%;
       }
     }
 
@@ -117,13 +119,24 @@
         --ib-h: 0%;
       }
     }
-  }
 
-  &-x {
-    &-up {
+    // Pixels
+    &-pixel {
+      --ib-timing: steps(4, end);
+
       &:not(:hover) {
         --ib-ty: -100%;
       }
+    }
+  }
+
+  // Horizontal
+  &-x {
+    &-invert {
+      --ib-d1: 0.3;
+      --ib-d2: 0.2;
+      --ib-d3: 0.1;
+      --ib-d4: 0;
     }
 
     &-left {
@@ -139,18 +152,21 @@
 
     }
 
-    &-down {
-      &:not(:hover) {
-        --ib-ty: 100%;
-      }
-    }
-
     &-center {
       --ib-l: 50%;
       --ib-tx: -50%;
 
       &:not(:hover) {
         --ib-w: 0%;
+      }
+    }
+
+    // Pixels
+    &-pixel {
+      --ib-timing: steps(4, end);
+
+      &:not(:hover) {
+        --ib-tx: -100%;
       }
     }
   }
